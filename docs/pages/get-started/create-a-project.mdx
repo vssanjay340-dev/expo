@@ -1,28 +1,69 @@
----
-title: Create a project
-description: Learn how to create a new Expo project.
-hideTOC: true
----
+export default function DTPredictorApp() { return ( <div className="min-h-screen bg-black text-white p-6 font-sans"> <div className="max-w-md mx-auto"> <div className="bg-zinc-900 rounded-3xl p-6 shadow-2xl border border-yellow-500"> <div className="flex items-center justify-between mb-6"> <div> <h1 className="text-3xl font-bold text-yellow-400">DT Predictor</h1> <p className="text-zinc-400 text-sm">Premium Dragon vs Tiger Prediction App</p> </div> <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-black font-bold text-xl"> DT </div> </div>
 
-import { Terminal } from '~/ui/components/Snippet';
+<div className="bg-black rounded-2xl p-5 border border-zinc-800 mb-6">
+        <div className="flex justify-between items-center mb-3">
+          <span className="text-zinc-400">Live Prediction</span>
+          <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">
+            AI ACTIVE
+          </span>
+        </div>
 
-Expo is a React Native framework that makes developing Android and iOS apps easier. Our framework provides file-based routing, a standard library of native modules, and much more. Expo is open source with an active community on [GitHub](https://github.com/expo/expo) and [Discord](https://chat.expo.dev).
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="bg-red-600 rounded-2xl p-5 text-center shadow-lg">
+            <h2 className="text-2xl font-bold">DRAGON</h2>
+            <p className="text-sm mt-1">Win Chance 68%</p>
+          </div>
 
-We also make [Expo Application Services (EAS)](https://expo.dev/eas), a set of services that complement the Expo framework in each step of the development process.
+          <div className="bg-blue-600 rounded-2xl p-5 text-center shadow-lg opacity-50">
+            <h2 className="text-2xl font-bold">TIGER</h2>
+            <p className="text-sm mt-1">Win Chance 32%</p>
+          </div>
+        </div>
 
-## System requirements
+        <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-4 rounded-2xl text-lg hover:scale-105 transition-all duration-300">
+          GET NEXT PREDICTION
+        </button>
+      </div>
 
-- [Node.js (LTS)](https://nodejs.org/en/).
-- macOS, Windows (Powershell and [WSL 2](https://expo.fyi/wsl)), and Linux are supported.
+      <div className="bg-zinc-950 rounded-2xl p-5 border border-zinc-800 mb-6">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold">VIP Premium</h3>
+          <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+            ₹299/month
+          </span>
+        </div>
 
-We recommend starting with the default project created by `create-expo-app`. The default project includes example code to help you get started.
+        <ul className="space-y-3 text-sm text-zinc-300">
+          <li>✔ High Accuracy Predictions</li>
+          <li>✔ Real-Time Signals</li>
+          <li>✔ Premium UI Experience</li>
+          <li>✔ Fast Server Access</li>
+          <li>✔ Ad-Free Experience</li>
+        </ul>
 
-To create a new project, run the following command:
+        <button className="w-full mt-5 bg-white text-black font-semibold py-3 rounded-2xl hover:bg-zinc-200 transition-all">
+          UPGRADE NOW
+        </button>
+      </div>
 
-<Terminal cmd={['$ npx create-expo-app@latest --template default@sdk-55']} />
+      <div className="bg-zinc-950 rounded-2xl p-5 border border-zinc-800">
+        <h3 className="text-lg font-semibold mb-3">Recent Results</h3>
 
-> **Note:** During the SDK 55 transition period, `create-expo-app@latest` without the `--template` flag creates an SDK 54 project. If you plan to use Expo Go on a physical device, use an SDK 54 project. Otherwise, use `--template default@sdk-55` to create an SDK 55 project. You can also choose a different template by adding the [`--template` option](/more/create-expo/#--template).
+        <div className="flex gap-2 flex-wrap">
+          <span className="bg-red-600 px-4 py-2 rounded-xl">D</span>
+          <span className="bg-blue-600 px-4 py-2 rounded-xl">T</span>
+          <span className="bg-red-600 px-4 py-2 rounded-xl">D</span>
+          <span className="bg-red-600 px-4 py-2 rounded-xl">D</span>
+          <span className="bg-blue-600 px-4 py-2 rounded-xl">T</span>
+          <span className="bg-red-600 px-4 py-2 rounded-xl">D</span>
+        </div>
+      </div>
 
-## Next step
+      <p className="text-center text-xs text-zinc-500 mt-6">
+        Entertainment app only. Predictions are not guaranteed.
+      </p>
+    </div>
+  </div>
+</div>
 
-You have a project. Now it's time to set up your development environment so that you can start developing.
+) }
